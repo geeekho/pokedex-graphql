@@ -1,0 +1,63 @@
+/**
+ * Ce composant est utilisé pour simuler les requêtes GET_POKEMON_EVOLUTION_CHAIN et
+ * GET_POKEMON_SPRITES_ID récupérées avec Apollo Client.
+ *
+ * Étant donné qu'une version expérimentale d'Apollo Client pour le SSR a été utilisée dans
+ * 'lib/apolloClient', certains erreurs inattendues ont été rencontrées.
+ * Par conséquent, ce composant a été implémenté comme une preuve de concept pour
+ * démontrer comment simuler les fonctions Apollo dans Storybook.
+ *
+ * L'objectif est de tester le composant "Evolutions" tout en l'isolant des
+ * requêtes réseau réelles et d'éviter les erreurs liées à la version expérimentale
+ * d'Apollo Client pour le SSR.
+ */
+
+// import { useQuery } from '@apollo/client';
+// import { GET_POKEMON_EVOLUTION_CHAIN } from '@/lib/queries'; // GraphQL query
+// import { EvolutionChainResponse } from '@/types/pokemon';
+
+// interface Props {
+//   color: string;
+//   evolutionId?: number;
+// }
+
+// const Evolutions = ({ color, evolutionId }: Props) => {
+//   const { data, loading, error } = useQuery<EvolutionChainResponse>(
+//     GET_POKEMON_EVOLUTION_CHAIN,
+//     {
+//       variables: { id: evolutionId }, // Pass the id as a variable
+//     }
+//   );
+
+//   if (loading) return <div>Loading...</div>;
+//   if (error) return <div>Error: {error.message}</div>;
+
+//   // Ensure that the data exists and has the correct structure
+//   const evolutionChain = data?.data.chain[0]?.pokemon?.nodes || [];
+
+//   return (
+//     <div
+//       className="w-full max-w-md flex flex-col items-center justify-center gap-2"
+//       style={
+//         {
+//           '--custom-active-color': `${color}`,
+//         } as React.CSSProperties
+//       }
+//     >
+//       <div className="flex items-center flex-col sm:flex-row justify-center flex-wrap gap-2">
+//         {evolutionChain.map((pokemon) => (
+//           <div
+//             key={pokemon.id}
+//             className="flex flex-col sm:flex-row items-center justify-center sm:gap-4"
+//           >
+//             <div className="flex sm:flex-col items-center justify-center">
+//               <span className="capitalize">{pokemon.name}</span>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Evolutions;

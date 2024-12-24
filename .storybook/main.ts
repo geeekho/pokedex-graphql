@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     '@storybook/nextjs',
     '@storybook/addon-jest',
     'storybook-addon-module-mock',
+    // 'storybook-addon-apollo-client' //?SEE __POC__ FILES FOR EXPLANATION
   ],
   framework: {
     name: '@storybook/nextjs',
